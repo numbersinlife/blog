@@ -3,6 +3,9 @@ title = "Minimo"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
 
+# folder to create the static site
+publishDir = "docs"
+
 theme = "minimo"
 
 disqusShortname = ""
