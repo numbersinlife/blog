@@ -25,7 +25,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "Numbersinlife blog - all things data related."
+description = "All things data related."
 title404 = "Nothing's here!"
 
 [params.assets]
