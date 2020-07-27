@@ -5,9 +5,37 @@
     <link>http://blog.numbersinlife.eu/tags/</link>
     <description>Recent content in Tags on Numbersinlife blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 25 Jul 2020 15:30:09 +0200</lastBuildDate>
     
 	<atom:link href="http://blog.numbersinlife.eu/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bee</title>
+      <link>http://blog.numbersinlife.eu/tags/bee/</link>
+      <pubDate>Sat, 25 Jul 2020 15:30:09 +0200</pubDate>
+      
+      <guid>http://blog.numbersinlife.eu/tags/bee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RaspberryPie</title>
+      <link>http://blog.numbersinlife.eu/tags/raspberrypie/</link>
+      <pubDate>Sat, 25 Jul 2020 15:30:09 +0200</pubDate>
+      
+      <guid>http://blog.numbersinlife.eu/tags/raspberrypie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Swarm</title>
+      <link>http://blog.numbersinlife.eu/tags/swarm/</link>
+      <pubDate>Sat, 25 Jul 2020 15:30:09 +0200</pubDate>
+      
+      <guid>http://blog.numbersinlife.eu/tags/swarm/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Numbersinlife blog</title>
-    <link>http://blog.numbersinlife.eu/</link>
-    <description>Recent content on Numbersinlife blog</description>
+    <title>RaspberryPie on Numbersinlife blog</title>
+    <link>http://blog.numbersinlife.eu/tags/raspberrypie/</link>
+    <description>Recent content in RaspberryPie on Numbersinlife blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 25 Jul 2020 15:30:09 +0200</lastBuildDate>
     
-	<atom:link href="http://blog.numbersinlife.eu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.numbersinlife.eu/tags/raspberrypie/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

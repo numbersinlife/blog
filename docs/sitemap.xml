@@ -3,6 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://blog.numbersinlife.eu/tags/bee/</loc>
+    <lastmod>2020-07-25T15:30:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.numbersinlife.eu/blog-posts/</loc>
+    <lastmod>2020-07-25T15:30:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.numbersinlife.eu/blog-posts/bee-on-raspberry-pie/</loc>
+    <lastmod>2020-07-25T15:30:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.numbersinlife.eu/</loc>
+    <lastmod>2020-07-25T15:30:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.numbersinlife.eu/tags/raspberrypie/</loc>
+    <lastmod>2020-07-25T15:30:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.numbersinlife.eu/tags/swarm/</loc>
+    <lastmod>2020-07-25T15:30:09+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.numbersinlife.eu/tags/</loc>
+    <lastmod>2020-07-25T15:30:09+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://blog.numbersinlife.eu/authors/</loc>
   </url>
   
@@ -11,15 +46,7 @@
   </url>
   
   <url>
-    <loc>http://blog.numbersinlife.eu/</loc>
-  </url>
-  
-  <url>
     <loc>http://blog.numbersinlife.eu/series/</loc>
-  </url>
-  
-  <url>
-    <loc>http://blog.numbersinlife.eu/tags/</loc>
   </url>
   
 </urlset>
