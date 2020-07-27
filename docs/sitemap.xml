@@ -3,23 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.example.com/authors/</loc>
+    <loc>http://blog.numbersinlife.eu/authors/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/categories/</loc>
+    <loc>http://blog.numbersinlife.eu/categories/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/</loc>
+    <loc>http://blog.numbersinlife.eu/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/series/</loc>
+    <loc>http://blog.numbersinlife.eu/series/</loc>
   </url>
   
   <url>
-    <loc>http://www.example.com/tags/</loc>
+    <loc>http://blog.numbersinlife.eu/tags/</loc>
   </url>
   
 </urlset>
