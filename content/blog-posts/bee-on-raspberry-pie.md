@@ -84,6 +84,105 @@ Interface options -> SSH -> enable
 
 When asked to reboot, do so.
 
+You can now work directly on the machine, or SSH to it from another one.
+
+Run `sudo apt update` , followed by `sudo apt upgrade` to get the latest updates. 
+
+Next, install git via `sudo apt install git`
+
+Download and install golang 1.15 as described on the golang page https://golang.org/doc/install#install. Basically, you will need to find the build appropriate for Raspi Zero W, which can be found here: https://golang.org/dl/
+
+To download it run `wget https://golang.org/dl/go1.15.6.linux-armv6l.tar.gz`
+
+Extract as `sudo tar -C /usr/local -xzf go1.15.6.linux-armv6l.tar.gz`
+
+Edit your .profile, eg. `nano ~/.profile`
+
+add `export PATH=$PATH:/usr/local/go/bin`at the end of it
+
+CTRL-O, CTRL-X to save and exit
+
+run `source $HOME/.profile`
+
+run `go version` to check go is working
+
+
+
+Now you can install Swarm Bee client. Since a built binary does not exist for Raspie Zero W, you will have biuld it yourself from source. Therefore, the appropriate instructions are here: https://docs.ethswarm.org/docs/installation/build-from-source
+
+```
+git clone https://github.com/ethersphere/bee
+
+cd bee
+
+git checkout v0.4.1
+
+make binary
+```
+
+The build will probably take some time, grab a lunch.
+
+After it finishes, check that Bee exists.
+
+``` 
+./dist/bee version
+```
+
+It should print out a version number with a some other string at the end. E.g. `0.4.1-4b98b68`
+
+
+
+Make a link to bee executable from a folder that is in $PATH, to make it run from any "folder"
+
+```
+cd /usr/local/bin/
+sudo ln -s /home/pi/bee/dist/bee
+```
+
+
+
+Configuring bee
+
+We will set it up to be run manually, by starting a bee executable and using a custom config file. 
+
+Generate a default bee config file, from the user's home folder (/home/pi) running:
+
+`bee printconfig --verbosity=5 &> .bee.yaml`
+
+Edit it
+
+`nano .bee.yaml`
+
+Set / change the following lines:
+
+
+
+```
+debug-api-enable=true # optional - makes debug API available
+password: "somethingsecure" # optional - uses this password instead of asking every time
+swap-endpoint: https://rpc.slock.it/goerli 
+```
+
+Save with CTRL-O, CTRL-X.
+
+Now you should be able to run bee by running `bee start`. Although it will start, you will get messages of it needing to have goerli eth and goerli bzz available (at the time of writing it runs on Goerli testnet and these are needed for the incentives contracts to initiate and work). The messages will instruct you where to go to to reach a faucet that will give you the funds needed to start., e.g. https://faucet.ethswarm.org?address=yourethereumaddress
+
+Open it in your browser and confirm you are not a robot. click to "Request goeth and gbzz".
+
+You should get a success message. Wait for a minute, then check back you node. 
+
+Some initial chequebook deployments will be made and syncing with the network should start. 
+
+Now you should be able to start it any time with `bee start`
+
+You can install a JSON parser `sudo apt install jq`
+
+And run `curl http://localhost:1635/topology | jq ` (on another terminal) to see how many nodes are connected
+
+Exit running the client with CTRL-C.
+
+
+
 
 
 
