@@ -36,7 +36,7 @@ gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 
 [params.copyright]
 prefix = ""
-holder = "Črt Ahlin"
+holder = "numbersinlife"
 startYear = "2021"
 suffix = ""
 
@@ -51,7 +51,7 @@ showReadingTime = true
 showLastmod = true
 taxonomyCloudShuffle = true
 accentColor = "#ffcd00"
-hideMainMenu = false
+hideMainMenu = true
 
 [params.sidebar]
 enable = true
@@ -110,7 +110,7 @@ issueTerm = "pathname" # pathname / url / title
 
 [params.comments.utterances.github]
 username = "numbersinlife"
-repository = "minimo"
+#repository = "minimo"
 
 [params.search]
 client = "fuse" # algolia / fuse / lunr
@@ -129,11 +129,11 @@ tag = "tags"
 [permalinks]
 page = "/:slug/"
 
-[[menu.main]]
-name = "Github"
-weight = -10
-identifier = "repository"
-url = "https://github.com/numbersinlife"
+#[[menu.main]]
+#name = "Github"
+#weight = -10
+#identifier = "repository"
+#url = "https://github.com/numbersinlife"
 
 [blackfriday]
 hrefTargetBlank = true
