@@ -1,11 +1,11 @@
 ---
-title: "Installing and running Swarm Bee client on Raspberry Pie Zero WH"
+title: "Installing and running Swarm Bee client on Raspberry Pi Zero WH"
 date: 2020-07-25T15:30:09+02:00
 draft: true
 tags:
   - Bee
   - Swarm
-  - RaspberryPie
+  - RaspberryPi
 ---
 
 - prerequisites
@@ -20,7 +20,7 @@ tags:
 
 # Prerequisites
 - micro SD card with Raspbian OS, with as much free space you want to dedicate to serving files (e.g. a 32 GB card)
-- RaspberryPie Zero W (the currently newest Raspi Zero, that has Wifi)
+- RaspberryPi Zero W (the currently newest Raspi Zero, that has Wifi)
 - micro USB power supply
 - Raspi Housing (optional)
 - micro USB to USB adapter & USB keyboard (or some other setup to connect a keyboad)
@@ -32,7 +32,7 @@ tags:
 Probably the most elegant way to get an OS to the micro SD card to run the Pi from, is to use an app called "Raspberry Pi Imager", that is available for Linux (possibly other OSes, for the purposes of this article, Pop-OS was used).
 Run it.
 
-![image-20210110221742216](bee-on-raspberry-pie.assets/image-20210110221742216.png)
+![image-20210110221742216](/blog-posts/bee-on-raspberry-pi-zero.assets/image-20210110221742216.png)
 
 
 
@@ -62,7 +62,7 @@ After the process finishes successfully, you should have a bootable micro SD car
 
 
 
-You can now put the SD card into your Raspi, and stick the whole thing into its housing, if you have one. 
+You can now put the SD card into your Raspi, and stick the whole thing into its housing, if you have one.
 
 Attach the USB-to-microusb to the micro USB port labeled with an USB icon (you will use it to plug in an USB keyboard).
 
@@ -86,7 +86,7 @@ When asked to reboot, do so.
 
 You can now work directly on the machine, or SSH to it from another one.
 
-Run `sudo apt update` , followed by `sudo apt upgrade` to get the latest updates. 
+Run `sudo apt update` , followed by `sudo apt upgrade` to get the latest updates.
 
 Next, install git via `sudo apt install git`
 
@@ -124,7 +124,7 @@ The build will probably take some time, grab a lunch.
 
 After it finishes, check that Bee exists.
 
-``` 
+```
 ./dist/bee version
 ```
 
@@ -143,7 +143,7 @@ sudo ln -s /home/pi/bee/dist/bee
 
 Configuring bee
 
-We will set it up to be run manually, by starting a bee executable and using a custom config file. 
+We will set it up to be run manually, by starting a bee executable and using a custom config file.
 
 Generate a default bee config file, from the user's home folder (/home/pi) running:
 
@@ -160,7 +160,7 @@ Set / change the following lines:
 ```
 debug-api-enable=true # optional - makes debug API available
 password: "somethingsecure" # optional - uses this password instead of asking every time
-swap-endpoint: https://rpc.slock.it/goerli 
+swap-endpoint: https://rpc.slock.it/goerli
 ```
 
 Save with CTRL-O, CTRL-X.
@@ -169,9 +169,9 @@ Now you should be able to run bee by running `bee start`. Although it will start
 
 Open it in your browser and confirm you are not a robot. click to "Request goeth and gbzz".
 
-You should get a success message. Wait for a minute, then check back you node. 
+You should get a success message. Wait for a minute, then check back you node.
 
-Some initial chequebook deployments will be made and syncing with the network should start. 
+Some initial chequebook deployments will be made and syncing with the network should start.
 
 Now you should be able to start it any time with `bee start`
 
@@ -180,12 +180,3 @@ You can install a JSON parser `sudo apt install jq`
 And run `curl http://localhost:1635/topology | jq ` (on another terminal) to see how many nodes are connected
 
 Exit running the client with CTRL-C.
-
-
-
-
-
-
-
-
-
