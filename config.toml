@@ -1,5 +1,5 @@
 baseURL = "http://blog.numbersinlife.eu"
-title = "Numbersinlife blog"
+title = "numbersinlife blog"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
 
@@ -25,7 +25,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "All things data related."
+description = "It's about your data."
 title404 = "Nothing's here!"
 
 [params.assets]
@@ -37,7 +37,7 @@ gopher = "" # used in 404 template ( Generator: https://gopherize.me )
 [params.copyright]
 prefix = ""
 holder = "Črt Ahlin"
-startYear = "2020"
+startYear = "2021"
 suffix = ""
 
 [params.settings]
@@ -130,7 +130,7 @@ tag = "tags"
 page = "/:slug/"
 
 [[menu.main]]
-name = "Repo"
+name = "Github"
 weight = -10
 identifier = "repository"
 url = "https://github.com/numbersinlife"
