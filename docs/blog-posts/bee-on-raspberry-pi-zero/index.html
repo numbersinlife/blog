@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang='en' dir='auto'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='prerequisites describe Installation describe running  Introduction Swarm decentralized storage relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the Bee implementation by the Swarm team.
+Why would you want to run Bee on a Raspi Zero? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Installing and running Swarm Bee client on Raspberry Pi Zero WH • numbersinlife blog'>
+<meta property='og:description' content='prerequisites describe Installation describe running  Introduction Swarm decentralized storage relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the Bee implementation by the Swarm team.
+Why would you want to run Bee on a Raspi Zero? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm.'>
+<meta property='og:url' content='http://blog.numbersinlife.eu/blog-posts/bee-on-raspberry-pi-zero/'>
+<meta property='og:site_name' content='numbersinlife blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='blog-posts'><meta property='article:tag' content='Bee'><meta property='article:tag' content='Swarm'><meta property='article:tag' content='RaspberryPi'><meta property='article:tag' content='RasPi'><meta property='article:tag' content='Zero'><meta property='article:published_time' content='2021-01-30T00:00:00Z'/><meta property='article:modified_time' content='2021-01-30T00:00:00Z'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.80.0" />
+
+  <title>Installing and running Swarm Bee client on Raspberry Pi Zero WH • numbersinlife blog</title>
+  <link rel='canonical' href='http://blog.numbersinlife.eu/blog-posts/bee-on-raspberry-pi-zero/'>
+  
+  
+  <link rel='icon' href='/favicon.png'>
+<link rel='stylesheet' href='/assets/css/main.ab98e12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+  
+
+</head>
+<body class='page type-blog-posts has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.png'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      numbersinlife blog
+      </a>
+    </h2>
+    <div class='desc'>
+    It&#39;s about your data.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/bee/' style='font-size:1em'>Bee</a>
+      </li><li>
+        <a href='/tags/raspberrypi/' style='font-size:1em'>RaspberryPi</a>
+      </li><li>
+        <a href='/tags/raspi/' style='font-size:1em'>RasPi</a>
+      </li><li>
+        <a href='/tags/swarm/' style='font-size:1em'>Swarm</a>
+      </li><li>
+        <a href='/tags/zero/' style='font-size:1em'>Zero</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>numbersinlife blog</a></li><li><a href='/blog-posts/'>Blog-posts</a></li><li><span>Installing and running Swarm Bee client on Raspberry Pi Zero WH</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>numbersinlife blog</p><p class='desc site-desc'>It&#39;s about your data.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Installing and running Swarm Bee client on Raspberry Pi Zero WH</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2021-01-30T00:00:00Z'>2021, Jan 30</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+5 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <ul>
+<li>prerequisites</li>
+<li>describe Installation</li>
+<li>describe running</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://swarm.ethereum.org/">Swarm decentralized storage</a> relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the <a href="https://github.com/ethersphere/bee">Bee</a> implementation by the Swarm team.</p>
+<p>Why would you want to run Bee on a <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspi Zero</a>? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm. Or something completely different.</p>
+<p>Many <a href="https://github.com/ethersphere/bee/releases">pre-built packages</a> exist for various platforms, though not one for the RasPi Zero W(H). The installation is possible though, and this post will try to guide you through the process. It is a variation on the procedure described in <a href="https://docs.ethswarm.org/docs/">Swarm docs</a>, but might hopefully save you some time if working specifically with RasPi Zero.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Micro SD card with Raspbian OS, with as much free space you want to dedicate to serving files (e.g. a 32 GB card),</li>
+<li>RaspberryPi Zero W (the currently newest Raspi Zero, that has Wifi),</li>
+<li>micro USB power supply,</li>
+<li>Raspi housing (optional),</li>
+<li>micro USB to USB adapter &amp; USB keyboard (or some other setup to connect a keyboard),</li>
+<li>HDMI (female) to mini HDMI (male) adapter; assuming HDMI connection to monitor,</li>
+<li>Wifi connection to the Internet.</li>
+</ul>
+<h2 id="prepare-the-operating-system">Prepare the operating system</h2>
+<p>Probably the most elegant way to get an operating system (OS) to the micro SD card to run the Pi from, is to use an app called &ldquo;Raspberry Pi Imager&rdquo;, that is available for Linux (possibly other OSes; for the purposes of this article, Pop-OS was used).
+Run it.</p>
+<p><img src="/blog-posts/bee-on-raspberry-pi-zero.assets/image-20210110221742216.png" alt="image-20210110221742216"></p>
+<p>Choose the OS - no desktop is needed, a Lite version will do.</p>
+<p><img src="/blog-posts/bee-on-raspberry-pi-zero.assets/image-20210110221839607.png" alt="image-20210110221839607"></p>
+<p>Therefore, go for &ldquo;other&rdquo;.</p>
+<p><img src="/blog-posts/bee-on-raspberry-pi-zero.assets/image-20210110221916671.png" alt="image-20210110221916671"></p>
+<p>And pick the Pi OS Lite (32-bit).</p>
+<p><img src="/blog-posts/bee-on-raspberry-pi-zero.assets/image-20210110222052524.png" alt="image-20210110222052524"></p>
+<p>Choose your SD card. Select &ldquo;Write&rdquo;.</p>
+<p>After the process finishes successfully, you should have a bootable micro SD card for your RasPi.</p>
+<p><img src="/blog-posts/bee-on-raspberry-pi-zero.assets/image-20210110222736435.png" alt="image-20210110222736435"></p>
+<h2 id="booting-up-the-raspi">Booting up the Raspi</h2>
+<p>You can now put the SD card into your RasPi, and stick the whole thing into its housing, if you have one.</p>
+<p>Attach the USB-to-microUSB to the micro USB port labeled with an USB icon (you will use it to plug in an USB keyboard).</p>
+<p>Attach the HDMI-to-miniHDMI adapter to the mini HDMI port - you will use it to plug in you HDMI monitor.</p>
+<p>Attach your peripherals and the power supply (the micro USB port with the power icon). Your RasPi should boot up, visible on the monitor. Some housekeeping takes place at first boot, so it might take a bit longer.</p>
+<h2 id="first-login">First login</h2>
+<p>Login as user <code>pi</code>, password <code>raspberry</code> (these are the default settings, you should of course change them).</p>
+<p>Run <code>sudo raspi-config</code>.</p>
+<p>System options -&gt; Wireless LAN -&gt; answer questions to set up access to WiFi (should have Internet access, of course).</p>
+<p>System options -&gt; Password -&gt; change to a more secure one</p>
+<p>Interface options -&gt; SSH -&gt; enable</p>
+<p>When asked to reboot, do so.</p>
+<p>After reboot, you should be able to work directly on the machine, or SSH to it from another one on the same network.</p>
+<h2 id="update-install-git-and-golang">Update, install Git and Golang</h2>
+<p>Run <code>sudo apt update</code> , followed by <code>sudo apt upgrade</code> to get the latest updates.</p>
+<p>Next, install git via <code>sudo apt install git</code>.</p>
+<p>Download and install Golang 1.15 as described on the Golang page <a href="https://golang.org/doc/install#install">https://golang.org/doc/install#install</a>. Basically, you will need to find the build appropriate for RasPi Zero W, which can be found here: <a href="https://golang.org/dl/">https://golang.org/dl/</a>.</p>
+<p>To download it run:</p>
+<p><code>wget https://golang.org/dl/go1.15.6.linux-armv6l.tar.gz</code></p>
+<p>Extract as:</p>
+<p><code>sudo tar -C /usr/local -xzf go1.15.6.linux-armv6l.tar.gz</code></p>
+<p>Edit your .profile, eg. <code>nano ~/.profile</code> and add <code>export PATH=$PATH:/usr/local/go/bin</code>at the end of it.</p>
+<p>CTRL-O, CTRL-X to save and exit.</p>
+<p>Run</p>
+<p><code>source $HOME/.profile</code></p>
+<p>Run <code>go version</code> to check Golang is working.</p>
+<h2 id="installing-bee">Installing Bee</h2>
+<p>Now comes the installation of Swarm Bee client. Since a built binary does not exist for RasPi Zero W, you will have build it yourself from source. The appropriate instructions are in <a href="https://docs.ethswarm.org/docs/installation/build-from-source">Bee docs</a>. Short recap is bellow - note that a newer version of Bee might be available, in which case of course try for newest one in the <code>git checkout</code> part.</p>
+<pre><code>git clone https://github.com/ethersphere/bee
+cd bee
+git checkout v0.4.1
+make binary
+</code></pre><p>The build will probably take some time, grab lunch.</p>
+<p>After it finishes, check that Bee exists.</p>
+<pre><code>./dist/bee version
+</code></pre><p>It should print out a version number with a some other string at the end. E.g. <code>0.4.1-4b98b68</code>.</p>
+<p>Make a link to Bee executable from a folder that is in <code>$PATH</code>, to make it run from anywhere.</p>
+<pre><code>cd /usr/local/bin/
+sudo ln -s /home/pi/bee/dist/bee
+</code></pre><h2 id="configuring-bee">Configuring Bee</h2>
+<p>We will set it up to be run manually, by starting a Bee executable and using a custom configuration file.</p>
+<p>Generate a default bee config file, from the user&rsquo;s home folder (<code>/home/pi</code>) running:</p>
+<p><code>bee printconfig --verbosity=5 &amp;&gt; .bee.yaml</code></p>
+<p>Edit it, e.g. <code>nano .bee.yaml</code>.</p>
+<p>Set / change the following lines:</p>
+<pre><code>debug-api-enable=true # optional - makes debug API available
+password: &quot;somethingsecure&quot; # optional - uses this password instead of asking every time
+swap-endpoint: https://rpc.slock.it/goerli
+</code></pre><p>Save with CTRL-O, CTRL-X.</p>
+<p>Now you should be able to run bee by running <code>bee start</code>. Although it will start, you will get messages of it needing to have Goerli eth and Goerli bzz available (at the time of writing it runs on Goerli testnet and these are needed for the incentives contracts to initiate and work). The messages will instruct you where to go to to reach a faucet that will give you the funds needed to start., e.g. <code>https://faucet.ethswarm.org?address=yourethereumaddress</code>.</p>
+<p>Open it in your browser and confirm you are not a robot. Click to &ldquo;Request goeth and gbzz&rdquo;.</p>
+<p>You should get a success message. Wait for a minute, then check back you node.</p>
+<p>Some initial chequebook deployments will be made and syncing with the network should start.</p>
+<p>Exit running the client with CTRL-C.</p>
+<p>After this procedure you should be able to start Bee any time with <code>bee start</code>.</p>
+<h2 id="interfacing-with-a-running-bee">Interfacing with a running Bee</h2>
+<p>You can install a JSON parser <code>sudo apt install jq</code></p>
+<p>Open another terminal to the one Bee is running in (either another SSH connection or another virtual terminal; hint CTRL+ALT+Function keys).</p>
+<p>An example call for the debug API would be to run <code>curl http://localhost:1635/topology | jq </code> to see how many nodes are connected.</p>
+<p>API reference is in the <a href="https://docs.ethswarm.org/docs/api-reference/api-reference">Bee docs</a>.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/bee/'>Bee</a>, <a class='tag' href='/tags/swarm/'>Swarm</a>, <a class='tag' href='/tags/raspberrypi/'>RaspberryPi</a>, <a class='tag' href='/tags/raspi/'>RasPi</a>, <a class='tag' href='/tags/zero/'>Zero</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/numbersinlife' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2021 numbersinlife </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.c3bcf2df.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+
