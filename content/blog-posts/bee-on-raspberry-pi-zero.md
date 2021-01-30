@@ -174,7 +174,7 @@ After this procedure you should be able to start Bee any time with `bee start`.
 
 ## Interfacing with a running Bee
 
-You can install a JSON parser `sudo apt install jq`
+You can install a JSON parser by `sudo apt install jq`.
 
 Open another terminal to the one Bee is running in (either another SSH connection or another virtual terminal; hint CTRL+ALT+Function keys).
 
