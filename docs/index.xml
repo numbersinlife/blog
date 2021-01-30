@@ -4,6 +4,17 @@
     <title>numbersinlife blog</title>
     <link>http://blog.numbersinlife.eu/</link>
     <description>Recent content on numbersinlife blog</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="http://blog.numbersinlife.eu/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://blog.numbersinlife.eu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing and running Swarm Bee client on Raspberry Pi Zero WH</title>
+      <link>http://blog.numbersinlife.eu/blog-posts/bee-on-raspberry-pi-zero/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.numbersinlife.eu/blog-posts/bee-on-raspberry-pi-zero/</guid>
+      <description>prerequisites describe Installation describe running  Introduction Swarm decentralized storage relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the Bee implementation by the Swarm team.
+Why would you want to run Bee on a Raspi Zero? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm.</description>
+    </item>
+    
   </channel>
 </rss>

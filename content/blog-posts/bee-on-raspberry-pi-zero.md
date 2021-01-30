@@ -1,7 +1,7 @@
 ---
 title: "Installing and running Swarm Bee client on Raspberry Pi Zero WH"
 date: 2021-01-30
-draft: true
+draft: false
 tags:
   - Bee
   - Swarm
