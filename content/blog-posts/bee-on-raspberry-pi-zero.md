@@ -10,11 +10,6 @@ tags:
   - Zero
 ---
 
-- prerequisites
-- describe Installation
-- describe running
-
-
 ## Introduction
 
 [Swarm decentralized storage](https://swarm.ethereum.org/) relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the [Bee](https://github.com/ethersphere/bee) implementation by the Swarm team.
