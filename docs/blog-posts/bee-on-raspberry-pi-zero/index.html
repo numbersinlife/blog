@@ -3,12 +3,12 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='Introduction Swarm decentralized storage relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the Bee implementation by the Swarm team.
-Why would you want to run Bee on a Raspi Zero? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm.'>
+Why would you want to run Bee on a RasPi Zero? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm.'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Installing and running Swarm Bee client on Raspberry Pi Zero WH • numbersinlife blog'>
 <meta property='og:description' content='Introduction Swarm decentralized storage relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the Bee implementation by the Swarm team.
-Why would you want to run Bee on a Raspi Zero? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm.'>
+Why would you want to run Bee on a RasPi Zero? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm.'>
 <meta property='og:url' content='http://blog.numbersinlife.eu/blog-posts/bee-on-raspberry-pi-zero/'>
 <meta property='og:site_name' content='numbersinlife blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='blog-posts'><meta property='article:tag' content='Bee'><meta property='article:tag' content='Swarm'><meta property='article:tag' content='RaspberryPi'><meta property='article:tag' content='RasPi'><meta property='article:tag' content='Zero'><meta property='article:published_time' content='2021-01-30T00:00:00Z'/><meta property='article:modified_time' content='2021-01-30T00:00:00Z'/><meta name='twitter:card' content='summary'>
@@ -173,14 +173,14 @@ Why would you want to run Bee on a Raspi Zero? Well, maybe just to try it out. M
   <div class='container entry-content'>
   <h2 id="introduction">Introduction</h2>
 <p><a href="https://swarm.ethereum.org/">Swarm decentralized storage</a> relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the <a href="https://github.com/ethersphere/bee">Bee</a> implementation by the Swarm team.</p>
-<p>Why would you want to run Bee on a <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">Raspi Zero</a>? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm. Or something completely different.</p>
+<p>Why would you want to run Bee on a <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">RasPi Zero</a>? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm. Or something completely different.</p>
 <p>Many <a href="https://github.com/ethersphere/bee/releases">pre-built packages</a> exist for various platforms, though not one for the RasPi Zero W(H). The installation is possible though, and this post will try to guide you through the process. It is a variation on the procedure described in <a href="https://docs.ethswarm.org/docs/">Swarm docs</a>, but might hopefully save you some time if working specifically with RasPi Zero.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>Micro SD card with Raspbian OS, with as much free space you want to dedicate to serving files (e.g. a 32 GB card),</li>
-<li>RaspberryPi Zero W (the currently newest Raspi Zero, that has Wifi),</li>
+<li>RaspberryPi Zero W (the currently newest RasPi Zero, that has Wifi),</li>
 <li>micro USB power supply,</li>
-<li>Raspi housing (optional),</li>
+<li>RasPi housing (optional),</li>
 <li>micro USB to USB adapter &amp; USB keyboard (or some other setup to connect a keyboard),</li>
 <li>HDMI (female) to mini HDMI (male) adapter; assuming HDMI connection to monitor,</li>
 <li>Wifi connection to the Internet.</li>
@@ -198,7 +198,7 @@ Run it.</p>
 <p>Choose your SD card. Select &ldquo;Write&rdquo;.</p>
 <p>After the process finishes successfully, you should have a bootable micro SD card for your RasPi.</p>
 <p><img src="/blog-posts/bee-on-raspberry-pi-zero.assets/image-20210110222736435.png" alt="image-20210110222736435"></p>
-<h2 id="booting-up-the-raspi">Booting up the Raspi</h2>
+<h2 id="booting-up-the-raspi">Booting up the RasPi</h2>
 <p>You can now put the SD card into your RasPi, and stick the whole thing into its housing, if you have one.</p>
 <p>Attach the USB-to-microUSB to the micro USB port labeled with an USB icon (you will use it to plug in an USB keyboard).</p>
 <p>Attach the HDMI-to-miniHDMI adapter to the mini HDMI port - you will use it to plug in you HDMI monitor.</p>

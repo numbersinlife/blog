@@ -14,15 +14,15 @@ tags:
 
 [Swarm decentralized storage](https://swarm.ethereum.org/) relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the [Bee](https://github.com/ethersphere/bee) implementation by the Swarm team.
 
-Why would you want to run Bee on a [Raspi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm. Or something completely different.
+Why would you want to run Bee on a [RasPi Zero](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm. Or something completely different.
 
 Many [pre-built packages](https://github.com/ethersphere/bee/releases) exist for various platforms, though not one for the RasPi Zero W(H). The installation is possible though, and this post will try to guide you through the process. It is a variation on the procedure described in [Swarm docs](https://docs.ethswarm.org/docs/), but might hopefully save you some time if working specifically with RasPi Zero.
 
 ## Prerequisites
 - Micro SD card with Raspbian OS, with as much free space you want to dedicate to serving files (e.g. a 32 GB card),
-- RaspberryPi Zero W (the currently newest Raspi Zero, that has Wifi),
+- RaspberryPi Zero W (the currently newest RasPi Zero, that has Wifi),
 - micro USB power supply,
-- Raspi housing (optional),
+- RasPi housing (optional),
 - micro USB to USB adapter & USB keyboard (or some other setup to connect a keyboard),
 - HDMI (female) to mini HDMI (male) adapter; assuming HDMI connection to monitor,
 - Wifi connection to the Internet.
@@ -55,7 +55,7 @@ After the process finishes successfully, you should have a bootable micro SD car
 ![image-20210110222736435](/blog-posts/bee-on-raspberry-pi-zero.assets/image-20210110222736435.png)
 
 
-## Booting up the Raspi
+## Booting up the RasPi
 
 You can now put the SD card into your RasPi, and stick the whole thing into its housing, if you have one.
 
