@@ -10,6 +10,8 @@ tags:
   - Zero
 ---
 
+**Update 13th Feb 2021**: With the Bee release 0.5.0 the below instructions are out of date, at least in the part describing the funding of the node, under the Configuring bee section. Funding is now done differently, but there should be short instructions after starting the Bee client itself. 
+
 ## Introduction
 
 [Swarm decentralized storage](https://swarm.ethereum.org/) relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the [Bee](https://github.com/ethersphere/bee) implementation by the Swarm team.

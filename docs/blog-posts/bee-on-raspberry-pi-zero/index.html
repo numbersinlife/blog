@@ -2,13 +2,13 @@
 <html lang='en' dir='auto'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Introduction Swarm decentralized storage relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the Bee implementation by the Swarm team.
-Why would you want to run Bee on a RasPi Zero? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm.'>
+<meta name='description' content='Update 13th Feb 2021: With the Bee release 0.5.0 the below instructions are out of date, at least in the part describing the funding of the node, under the Configuring bee section. Funding is now done differently, but there should be short instructions after starting the Bee client itself.
+Introduction Swarm decentralized storage relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the Bee implementation by the Swarm team.'>
 <meta name='theme-color' content='#ffcd00'>
 
 <meta property='og:title' content='Installing and running Swarm Bee client on Raspberry Pi Zero WH • numbersinlife blog'>
-<meta property='og:description' content='Introduction Swarm decentralized storage relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the Bee implementation by the Swarm team.
-Why would you want to run Bee on a RasPi Zero? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm.'>
+<meta property='og:description' content='Update 13th Feb 2021: With the Bee release 0.5.0 the below instructions are out of date, at least in the part describing the funding of the node, under the Configuring bee section. Funding is now done differently, but there should be short instructions after starting the Bee client itself.
+Introduction Swarm decentralized storage relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the Bee implementation by the Swarm team.'>
 <meta property='og:url' content='http://blog.numbersinlife.eu/blog-posts/bee-on-raspberry-pi-zero/'>
 <meta property='og:site_name' content='numbersinlife blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='blog-posts'><meta property='article:tag' content='Bee'><meta property='article:tag' content='Swarm'><meta property='article:tag' content='RaspberryPi'><meta property='article:tag' content='RasPi'><meta property='article:tag' content='Zero'><meta property='article:published_time' content='2021-01-30T00:00:00Z'/><meta property='article:modified_time' content='2021-01-30T00:00:00Z'/><meta name='twitter:card' content='summary'>
@@ -157,7 +157,7 @@ Why would you want to run Bee on a RasPi Zero? Well, maybe just to try it out. M
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-5 mins read
+6 mins read
 </span>
 
 
@@ -171,7 +171,8 @@ Why would you want to run Bee on a RasPi Zero? Well, maybe just to try it out. M
   
 
   <div class='container entry-content'>
-  <h2 id="introduction">Introduction</h2>
+  <p><strong>Update 13th Feb 2021</strong>: With the Bee release 0.5.0 the below instructions are out of date, at least in the part describing the funding of the node, under the Configuring bee section. Funding is now done differently, but there should be short instructions after starting the Bee client itself.</p>
+<h2 id="introduction">Introduction</h2>
 <p><a href="https://swarm.ethereum.org/">Swarm decentralized storage</a> relies on a network of peers to store data and relay it requesting party. To be one of the peers, you need to run special client software - like the <a href="https://github.com/ethersphere/bee">Bee</a> implementation by the Swarm team.</p>
 <p>Why would you want to run Bee on a <a href="https://www.raspberrypi.org/products/raspberry-pi-zero-w/">RasPi Zero</a>? Well, maybe just to try it out. Maybe you have some IoT / sensor project that would benefit from storing data on Swarm. Or something completely different.</p>
 <p>Many <a href="https://github.com/ethersphere/bee/releases">pre-built packages</a> exist for various platforms, though not one for the RasPi Zero W(H). The installation is possible though, and this post will try to guide you through the process. It is a variation on the procedure described in <a href="https://docs.ethswarm.org/docs/">Swarm docs</a>, but might hopefully save you some time if working specifically with RasPi Zero.</p>
